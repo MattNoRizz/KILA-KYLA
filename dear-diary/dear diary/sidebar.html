@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="sidebar.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <title>To-Do List</title>
+</head>
+<body>
+  <div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Hello, <?php echo htmlspecialchars($firstName); ?>!</h2>
+            <button class="toggle-sidebar" onclick="toggleSidebar()">&#9776;</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="diary.php" class="active">Start Writing Diary</a></li>
+                <li><a href="todo.php">To-Do List</a></li>
+                <li><a href="moodboard.php">Moodboard</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+            </ul>
+        </nav>
+        <a href="logout.php" class="logout-button" onclick="confirmLogout()">Logout</a>
+    </aside>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the sidebar element and the toggle button
+            const sidebar = document.querySelector('.sidebar');
+            const toggleButton = document.querySelector('.toggle-sidebar');
+        
+            // Toggle sidebar open/close
+            toggleButton.addEventListener('click', function() {
+                sidebar.classList.toggle('close'); // Toggle the 'close' class on the sidebar
+                document.body.classList.toggle('sidebar-collapsed'); // Adjust the body margin when sidebar is collapsed
+            });
+        });
+        </script>
+        <script>
+            function confirmLogout() {
+                event.preventDefault();
+                if (confirm("Are you sure you want to log out?")) {
+                    // Redirect to logout.php if the user confirms
+                    window.location.href = "logout.php";
+                }
+            }
+        </script>
+        
+        
+</body>
+</html>           

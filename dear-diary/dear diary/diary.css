@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdebdb;
+    color: #4a3d31;
+}
+
+h1 {
+    color: #4a3d31;
+}
+
+h2 {
+    color: #dfcebf
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f3d6bb;
+}
+
+.new-note {
+    background-color: #fae3cc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.new-note input,
+.new-note textarea,
+.new-note button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid #d5b2a6;
+    border-radius: 5px;
+}
+
+.new-note button {
+    background-color: #d46a3b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.new-note button:hover {
+    background-color: #a84c30;
+}
+
+/* Notes Display */
+.notes {
+    display: flex;
+    flex-direction: column; /* Arrange notes vertically */
+    align-items: center;    /* Center the notes horizontally */
+    gap: 20px;              /* Add space between notes */
+}
+
+.note {
+    background-color: #e07e50;
+    color: black;
+    width: 80%;              /* Make the notes take up 80% of the container width */
+    max-width: 600px;        /* Limit the maximum width */
+    margin: 0 auto;          /* Center-align the notes */
+    padding: 20px;           /* Add padding inside each note */
+    border-radius: 8px;      /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for better visuals */
+    position: relative;
+}
+
+.note .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #5d4037;
+}
+
+.note .description {
+    font-size: 14px;
+    color: #7f6f60;
+    margin-bottom: 20px;
+}
+
+.note small {
+    font-size: 12px;
+    color: #a18c7a;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.delete-form {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.delete-button {
+    background-color: #d46a3b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #a84c30;
+}
+
+.main-content {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f3d6bb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #5d4037;
+}
+
+.main-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #7f6f60;
+}
+
+.main-content small {
+    display: block;
+    margin-top: 20px;
+    font-style: italic;
+    color: #a18c7a;
+}
+
+.actions .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d46a3b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.actions .button:hover {
+    background-color: #a84c30;
+}

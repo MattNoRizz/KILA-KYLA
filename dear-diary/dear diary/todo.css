@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    /* Colors */
+    --body-color: #f5e4d4;
+    --primary-color: #d46a3b;
+    --primary-color-light: #f1e1d1;
+    --text-color: #4a3d31;
+    --accent-color: #5d4037;
+    --light-text-color: #7f6f60;
+
+    /* Transition */
+    --tran-03: all 0.2s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: var(--tran-05);
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Container for the To-Do list */
+.todo-container {
+    background-color: #FFB6C1; /* Light pink */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for individual To-Do items */
+.todo-item {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item form {
+    display: inline;
+}
+
+.todo-item button {
+    background-color: #FF6347; /* Tomato red */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-item button:hover {
+    background-color: #FF4500; /* Darker red */
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.new-note {
+    margin-bottom: 20px;
+}
+
+.new-note input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.new-note button {
+    background-color: #FF69B4; /* Hot pink */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.new-note button:hover {
+    background-color: #FF1493; /* Deep pink */
+}

@@ -1,0 +1,221 @@
+/* Google Font Import - Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    /* Colors */
+    --body-color: #fdebdb;
+    --primary-color: #d46a3b;
+    --primary-color-light: #f8e4d0;
+    --text-color: #4a3d31;
+    --accent-color: #5d4037;
+    --light-text-color: #7f6f60;
+
+    /* Transition */
+    --tran-03: all 0.2s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: var(--tran-05);
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Main content styling */
+.content {
+    flex: 1;
+    padding: 30px;
+    max-width: 800px;
+    background-color: var(--primary-color-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.feature-box {
+    background-color: #df6d40; 
+    color: white; 
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--tran-03);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box:hover {
+    background-color: #b34a21; /
+}
+
+.feature-box a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from the parent */
+}
+
+.feature-box a:hover {
+    text-decoration: none; /* Ensure underline is still removed on hover */
+}
+
+.feature-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #f8f4f0; 
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #e0d6d1; /* Subtle lighter text for description */
+}
+
+/* Buttons */
+.buttons button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #a84c30;
+}
+
+.logout-button {
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.logout-button:hover {
+    background-color: #a84c30;
+}
+
+/* Header */
+header {
+    background-color: #f1e1d1;
+    text-align: center;
+    padding: 20px 0;
+    color: var(--accent-color);
+}
+
+/* Navigation */
+.main-navigation {
+    background-color: #944c35;;
+    padding: 10px 20px;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex; /* Align list items horizontally */
+    justify-content: space-around; /* Space out the list items evenly */
+}
+
+.nav-items li {
+    margin: 0 15px; /* Space between each menu item */
+}
+
+.nav-items li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-items li a:hover {
+    background-color: #b68373;; /* Darken on hover */
+    border-radius: 5px;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    .nav-items {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center the items */
+    }
+
+    .nav-items li {
+        margin: 10px 0; /* Add vertical spacing between items */
+    }
+}
+
+
+/* Intro Section */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color-light);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro .text {
+    max-width: 50%;
+}
+
+.intro h1 {
+    font-size: 28px;
+    color: #944c35;
+}
+
+.intro p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.image img {
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--light-text-color);
+}
